@@ -53,6 +53,25 @@ def pfin(i, n):
     return 1/fpin(i,n)
 
 
+def fain(i, n):
+    """Uniform series compound amount factor
+
+    Also known as the convert an annuity to a future worth factor
+
+    Args:
+        i: same as everywhere else
+        n: same as everywhere else
+    Returns:
+        a number
+    """
+    return (fpin(i,n) - 1) / i
+
+
+def afin(i,n):
+    """Sinking fun factor"""
+    return 1/fain(i,n)
+
+
 def cap_recov(p, s, i, n):
     """Capital recovery factor
 
